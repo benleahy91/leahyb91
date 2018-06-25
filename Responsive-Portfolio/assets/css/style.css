@@ -1,0 +1,201 @@
+* {
+		box-sizing: border-box;
+}
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 150%;
+	background: url(images/marbleback.jpg);
+}
+
+h1 {
+	float: left;
+	background-color: #5A2BF4;
+	width: 20%;
+	color:#FEFEFE;
+	padding: 20px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 60px;
+	border: 1px solid #010000;
+	width: 40%;
+}
+
+footer {
+
+	vertical-align: text-bottom;
+	font-size: 10px;
+	padding: 15px;
+	background: #d1d1e0;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}
+
+#contact {
+	float: right;
+	width: 17.5%;
+	height: 100%;
+	text-align: center;
+	padding: 25px;
+	margin-right: 20px;
+	background: #FEFEFE;
+	border: 1px solid #010000;
+}
+
+#memes {
+	float: left;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #010000;
+}
+
+#sitelinkbox {
+	float: right;
+	height: 100%;
+	width: 20%;
+	margin-right: 20px;
+	padding: 10px;
+	background: #FFFFFF;
+	text-align: justify;
+	word-spacing: 30px;
+	text-justify: inter-word;
+	vertical-align: middle;
+	border: 1px solid #010000;
+}
+
+#sitelink {
+	text-decoration: none;	
+}
+
+#aboutbox {
+	float: left;
+	width: 55%;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #FFFFFF;
+	margin-left: 60px;
+	border: 1px solid #010000;
+	clear: both;
+}
+
+#contactform {
+	float: left;
+	width: 40%;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #FFFFFF;
+	margin-left: 60px;
+	border: 1px solid #010000;
+	clear: both;
+}
+
+#dixie{
+	float: left;
+	margin-right: 25px
+}
+
+.container {
+	width: 100%;
+	min-height: 750px;
+}
+
+.header {
+	width: 100%;
+	margin-left: 60px;
+}
+
+.namebox{
+	width: 100%;
+}
+
+.memebox {
+	float: left;
+	width: 60%;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #FFFFFF;
+	margin-left: 60px;
+	border: 1px solid #010000;
+	clear: both;
+}
+
+@media (max-width: 980px) {
+
+}
+
+@media (max-width: 768px) {
+
+
+.nav {
+	width: 100%
+	
+}
+
+	}
+}
+
+@media (max-width: 640px) {
+
+	h1 {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		margin-bottom: 0px;
+		border: 0px;
+	}
+
+	#sitelinkbox {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		padding-bottom: 0px;
+		text-align: center;
+		margin-bottom: 30px;
+		border: 0px;
+
+	}
+
+	#aboutbox {
+		width: 100%;
+		margin-left: 0px;
+		margin-bottom: 30px;
+	}
+
+	.memebox {
+		text-align: center;
+		width: 100%;
+		margin-left: 0px;
+		margin-bottom: 30px;
+		clear: both;
+	}
+
+	#contact {
+		clear: both;
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		text-align: center;
+		height: 100%;
+		margin-bottom: 30px;
+	}
+
+	#contactform {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		margin-bottom: 30px;
+	}
+
+}
