@@ -138,13 +138,49 @@ footer {
 @media (max-width: 768px) {
 
 
-.nav {
+	.nav {
 	width: 100%
 	
-}
-
 	}
-}
+
+	h1 {
+		margin-left: 20px;
+	}
+
+	#aboutbox {
+		width: 60%;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 30px;
+		}
+
+	.memebox {
+		margin-bottom: 30px;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	#contactform {
+		margin-left: 20px;
+		width: 60%;
+		vertical-align: center;
+		margin-bottom: 30px;
+	}
+
+	#contact {
+		width: 30%;
+		float: right;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-left: 0px;
+	}
+
+	#sitelinkbox {
+		width: 40%;
+		margin-right: 20px;
+	}
+
+ }
 
 @media (max-width: 640px) {
 
