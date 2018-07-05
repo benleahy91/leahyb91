@@ -20,35 +20,39 @@ footer {
 }
 
 h1 {
-	float: left;
 	background-color: #5A2BF4;
 	color:#FEFEFE;
-	padding: 20px;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding: 19.5px;
 	text-align: center;
+	margin-left: 52px;
+	margin-right: -40px;
 	margin-top: 0px;
-	border: 1px solid #010000;
 	font-size: 32px;
-	margin-left: -15px;
+}
+
+.fluid-adjust {
+	margin-left: 40px;
+}
+
+
+.navigationbar {
+	background: white;
+	height: 77px;
 }
 
 .navbox {
 	float: right;
-	border: 1px solid #010000;
-	padding: 20px;
-	background: #FFFFFF;
+	padding: 26px;
+	background: white;
 	text-align: center;
 	word-spacing: 30px;
 	text-justify: inter-word;
 	vertical-align: middle;
-	border: 1px solid #010000;
 }
 
 .navlink {
 	padding-right: 10px;
 	padding-left: 10px;
-
 }
 
 .contentheader {
@@ -57,19 +61,31 @@ h1 {
 }
 
  .medialinks {
-	height: 100%;
 	text-align: center;
-	padding: 15px;
+	padding: 20px;
+	min-height: 150px;
+	min-width: 174px;
+	width: 225px;
 	background: #FEFEFE;
 	border: 1px solid #010000;
+	margin-top: 40px;
  }
 
  .contentbox {
 	background: #FFFFFF;
 	border: 1px solid #010000;
-	padding-left: 60px;
+	align-content: center;
+	overflow: auto;
+/*	padding-left: 60px;
 	padding-right: 60px;
 	padding-top: 30px;
+	margin-top: 40px;
+	margin-bottom: 40px;*/
+}
+
+.dixie {
+	float: left;
+	margin-right: 25px;
 }
 
 .memes {
@@ -91,3 +107,77 @@ h1 {
 	font-size: 6px;
 	line-height: 8px;
 }
+
+.center-nav {
+	text-align: center;
+}
+
+#submitbutton {
+	margin-bottom: 30px;
+	background-color: #5A2BF4;
+}
+
+#aboutboxfix {
+
+}
+
+@media (max-width: 980px){
+
+	.dixie{
+		float: none;
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	.contentheader {
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 768px){
+
+	.fluid-adjust {
+	margin-left: 0px;
+	}
+
+	.navigationbar {
+		padding-right: 0px;
+		margin-bottom: 0px;
+
+	}
+
+	.navbox {
+		float: none;
+		margin-top: -8px;
+	}
+
+	.contentbox{
+		margin-bottom: 0px;
+	}
+
+	.medialinks {
+		margin-bottom: 25px;
+		width: 100%;
+	}
+
+@media (max-width: 767px){
+
+	.navigationbar {
+		margin-bottom: 80px;
+		padding-left: 0px;
+	}
+
+	.nav-adjust {
+		padding-right: 0px;
+	}
+
+	.fluid-adjust {
+		margin-left: 0px;
+	}
+
+	.contentbox {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
