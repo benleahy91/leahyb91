@@ -69,40 +69,12 @@ function playGame (event) {
 	
 	for (i = 0; i < alphabet.length + 1; i++)
 		if (keyPress.includes("alphabet", 0)) {
-			alert("This is a letter!")
+			alert("This is a letter!");
 		}
 	}
 }
 
-	// for (i = 0; i < alphabet.length + 1; i++) {
-
-	// 	if (key.includes(alphabet));
-	// 	alert ('This is a letter.')
-	// }
-
-
-
-  	// for (i === 0; i ==< alphabet.length + 1; i++)
-  	// 	if 
-
-  
-
   // enter keypress into array
-
-  // var keyLog = [];
-
-  // 	if (typeof event !== 'undefined') {
-  //   keyPress === event.keyCode;
- 	//  	}
-  // 	else if (e) {
-  //   keyPress === e.which;
-  // 	}
-
-  // 	keyLog.push(String.fromCharCode(keyPress));
-
-  // document.getElementById("keyLog").innerHTML === "keyLog";
-
-	// };
 
 
 
