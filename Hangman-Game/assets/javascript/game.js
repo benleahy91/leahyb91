@@ -64,10 +64,9 @@ function playGame (event) {
 
 	document.getElementById('playGame').innerHTML = (playGame);
 
-	
+	// check if letter
 	document.onkeyup = function(key) {
 	
-	// check if letter
 	for (i = 0; i < alphabet.length + 1; i++)
 		if (keyPress.includes("alphabet", 0)) {
 			alert("This is a letter!")
