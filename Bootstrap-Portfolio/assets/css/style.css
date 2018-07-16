@@ -30,11 +30,6 @@ h1 {
 	font-size: 32px;
 }
 
-.fluid-adjust {
-	margin-left: 40px;
-}
-
-
 .navigationbar {
 	background: white;
 	height: 77px;
@@ -76,11 +71,11 @@ h1 {
 	border: 1px solid #010000;
 	align-content: center;
 	overflow: auto;
-/*	padding-left: 60px;
+	padding-left: 60px;
 	padding-right: 60px;
 	padding-top: 30px;
 	margin-top: 40px;
-	margin-bottom: 40px;*/
+	margin-bottom: 40px;
 }
 
 .dixie {
@@ -138,10 +133,6 @@ h1 {
 
 @media (max-width: 768px){
 
-	.fluid-adjust {
-	margin-left: 0px;
-	}
-
 	.navigationbar {
 		padding-right: 0px;
 		margin-bottom: 0px;
@@ -171,10 +162,6 @@ h1 {
 
 	.nav-adjust {
 		padding-right: 0px;
-	}
-
-	.fluid-adjust {
-		margin-left: 0px;
 	}
 
 	.contentbox {

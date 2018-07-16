@@ -1,0 +1,96 @@
+Hangman
+
+Variables
+	*rewrite*
+	Array
+	Randomized word from array
+	number of guesses = 12
+	Alphabet variable
+		Remove once guessed
+		If not in array, can't guess
+	wins = 0
+	losses = 0
+
+
+Guess the Word
+	Identifying word
+		Random word choice from array
+
+	Underscores
+		Split each string by character
+		Insert underscore for each character in random word
+		Gap for spaces, not another underscore?
+		Can't use randomword.length because each underscore needs a value?
+		Replace underscore with letter?
+
+	Guessing letters
+		Once a string is selected, break that down into its own array
+		If key is part of the string, replace _ with letter
+		If else, guesses --1
+
+Letters Guessed
+	Create log on HTML page
+		page log instead of console log?
+
+Guesses Left
+	guesses = 12
+	If else statement from word guess, guesses --1
+
+Win/Loss Counter
+	If guesses = 0, losses ++1
+		Rewrite each time?
+	If number of underscores = 0, wins ++1
+
+
+
+
+
+Guesses left
+	if letters guessed > guesses, console log for game over
+		Press enter to play again
+			If char = 0, reset game
+Games played
+	Count number of loops
+
+
+
+Functions
+	StartGame
+		*Define/Reset Variables
+		*Select word and break it
+		Update Front End
+			Convert to underscores
+	See if guess is correct
+	Checking if person won
+	Play Game
+		onkeyup
+			*Check to see if character is a letter
+			*Check to see if it's been guessed before
+			If is letter and hasn't been guessed, Check to see if it is in string
+			Check win
+				If no letters left
+					+1 to win counter
+					congrats alert
+					would you like to play again prompt
+						hit y to play again
+						onkeyup, if they press y start game function
+				else if loss
+					same as above
+
+If/else statements
+
+Methods
+	.join
+	.push
+	.includes
+	.split
+	.getElementById
+
+document.getElementById("htmlid").innerHTML = "ArrayName"
+
+If a key is presssed
+	Is it a letter?
+		If not, prompt please enter valid character
+	Has it been entered before?
+	Check to see if it's in array
+
