@@ -64,8 +64,8 @@ Functions
 	Checking if person won
 	Play Game
 		onkeyup
-			*Check to see if character is a letter
-			*Check to see if it's been guessed before
+			Check to see if character is a letter
+			Check to see if it's been guessed before
 			If is letter and hasn't been guessed, Check to see if it is in string
 			Check win
 				If no letters left
@@ -92,5 +92,5 @@ If a key is presssed
 	Is it a letter?
 		If not, prompt please enter valid character
 	Has it been entered before?
-	Check to see if it's in array
+		Check to see if it's in array
 
