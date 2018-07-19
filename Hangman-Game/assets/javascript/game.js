@@ -48,6 +48,7 @@ function startGame() {
 	}
 
 	underscores = underscores.join('   ');
+
 	console.log(underscores);
 
 	document.getElementById("underscores").innerHTML = (underscores);
@@ -96,8 +97,10 @@ function playGame (event) {
 	keyLog;
 	guessedLetters;
 
+//start Jared
+
 		// check if letter
-			for (var i = 0; i < alphabet.length + 1; i++) {
+			for (var i = 0; i < alphabet.length + 1; i++)  {
 
 			if (keyPress.indexOf(alphabet[i]) >= 0) {
 	  			keyLog.push(keyPress);
@@ -123,6 +126,8 @@ function playGame (event) {
 
 		// console.log(keyLog)
 
+
+// end Jared
 
 		// for (var i = 0; i < wordSplit.length + 1; i++) {
 		// 	if (keyPress.indexOf(wordSplit) <= 0) {
