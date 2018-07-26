@@ -2,124 +2,144 @@
 var dogCelebs = ['Woof Blitzer', 'Bark Cuban', 'Mick Wagger', 'Julio Bones', 'Alex Ofetchkin', 'Jason Beagle', 'Hillary Ruff', 'Pet Farvre', 'Waggie Gyllenhall'];
 var wins = 0;
 var losses = 0;
+var wordSplit = [];
+var guessesLeft = 8;
+var gamehud = [];
+var wrongGuesses = [];
+var alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var gamehud = [];
+var lettersRemaining = 0;
+var wordIndex = []
 
+function startGame(event) {
 
-function startGame() {
-
-	var guessesLeft = 12;
-	var wordSplit = [];
-	var guessWord = [];
-	var wrongGuesses = [];
-
-	// Pick Word
+	lettersRemaining = 0;
 	var randomWord = dogCelebs[Math.floor(Math.random() * dogCelebs.length)];
-	
-	// Split
-	var wordSplit = randomWord.split('');
+	guessesLeft = 8;
+	wrongGuesses = []
 
-	//Underscores
+	// Split / underscores
+	wordSplit = randomWord.split('');
 	wordSplit = dogCelebs[Math.floor(Math.random() * dogCelebs.length)];
-
 	wordSplit = wordSplit.replace(/\s/g, '');
+	wordSplit = wordSplit.toUpperCase();
+	wordSplit = wordSplit.split('')
 
-	for (var i = 0; i < wordSplit.length; i++) {
-		guessWord.push('_');
+	for (i in wordSplit) {
+		gamehud.push("_");
+		lettersRemaining++;
 	}
-
-		guessWord = guessWord.join('   ');
 
 	//Guess Word
-	document.getElementById("guessWord").innerHTML = (guessWord);
+	document.getElementById("gamehud").innerHTML = gamehud.join(' ');
 	// Letters Guessed
-	document.getElementById('wrongGuesses').innerHTML = (wrongGuesses);
+	document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 	//Guesses Remaining
-	document.getElementById('guessesLeft').innerHTML = (guessesLeft);
+	document.getElementById('guessesLeft').innerHTML = guessesLeft;
 	// Wins
-	document.getElementById('wins').innerHTML = (wins);
+	document.getElementById('wins').innerHTML = wins;
 	// Losses
-	document.getElementById('losses').innerHTML = (losses);
+	document.getElementById('losses').innerHTML = losses;
 
+	console.log(wordSplit)
 }
 
-function playGame (event) {
+function checkLetter(letter) {
+	// check if letter, check if not number, check if guessed
+	// call guessWord function
+	var letterGuessed = String.fromCharCode(event.keyCode).toUpperCase();
+	var letterInWord = false;
 
-	var guessesLeft = 12;
-	var wordSplit = [];
-	var guessWord = [];
-	var wrongGuesses = [];
-
-	var randomWord = dogCelebs[Math.floor(Math.random() * dogCelebs.length)];
-	
-	var wordSplit = randomWord.split('');
-
-	wordSplit = dogCelebs[Math.floor(Math.random() * dogCelebs.length)];
-
-	wordSplit = wordSplit.replace(/\s/g, '');
-
-	for (var i = 0; i < wordSplit.length; i++) {
-		guessWord.push('_');
+	if (alphabet.indexOf(letterGuessed) === -1) {
+		alert('That is not a letter');
 	}
 
-	guessWord = guessWord.join('   ');
+	if (wrongGuesses.indexOf(letterGuessed) !== -1) {
+	alert('You already guessed that letter')
+	}
+		
+		else {
+			wrongGuesses.push(letterGuessed);
+			guessWord();
+		}
 
-	console.log(wordSplit);
-	console.log(guessWord);
 
-	function checkLetter (letter) {
+	function guessWord(letter) {
+	// check to see if in word
+	// update variables as necessary (remove guess remaining and add to heads up display)
+		if (wordSplit.indexOf(letterGuessed) === -1) {
+			document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
+			guessesLeft--;
+			document.getElementById('guessesLeft').innerHTML = guessesLeft;
+			}
 
-		document.addEventListener ('keyPress', playGame, false);
+			else {
+				letterInWord = true;
+			}
+		if (letterInWord = true) {
+				document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 
-		document.getElementById('keyPress').innerHTML = keyPress;
-	
-		document.getElementById('keyCode').innerHTML = keyCode;
-
-		document.onkeyup = function(event) {
-	
-			var keyCode = event.keyCode;
-			var keyPress = String.fromCharCode(event.keyCode).toUpperCase();
-			var letterInWord = false;
-			var alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-
-			console.log(keyPress);
-
-			for (var i = 0; i < wrongGuesses.length; i++) {
-				if (alphabet.indexOf(keyPress) === -1) {
-					console.log('That is not a letter');
-				}
-
-				else if (keyPress === wrongGuesses[i]) {
-					letterInWord === true;
-					checkGuess();
+			for (var i = 0; i < wordSplit.length + 1; i++) {
+				if (wordSplit[i] === letterGuessed) {
+					lettersRemaining--
+					gamehud[i] === letterGuessed;
+					document.getElementById("gamehud").innerHTML = gamehud.join(' ');
+					console.log(gamehud)
+					console.log(letterGuessed)
 				}
 			}
 		}
 	}
 }
-// 	function checkGuess (e) {
-// 		for (var i = 0; i < wordSplit.length -1; i++)
-
-// 	}
-// }
-
-	// for (var i = 0; i < wordSplit.length; i++) {
-	// 	if (letterInWord === true) {
-	// 		guessWord.push(keyPress)
-	// 	}
-	// }
 
 
+function checkWin(event) {
 
+	if (guessesLeft === 0) {
+		alert('You lose. Your defeat will be etched in the annals of history and your great, great, great, grandchildren will be ashamed of your existence until you are inevitably forgotten.');
+		losses++
+		document.getElementById('losses');
+		var playAgain = confirm('Would you like to play again?');
+
+		if (playAgain == true) {
+			startGame();
+		}
+		else {
+			alert("Fine, I don't want you playing my game anyway. I put a lot of work into this you know. I honestly hope your butt falls off.")
+			console.log(losses)
+			document.getElementById('losses');
+		}
+	}
+
+	if (lettersRemaining === 0) {
+		alert('You win!');
+		wins++
+		document.getElementById('wins');
+		var playAgain = confirm('Would you like to play again?');
+
+		if (playAgain == true) {
+			startGame();
+		}
+		
+		else {
+			alert("Fine, I don't want you playing my game anyway. I put a lot of work into this you know. I honestly hope your butt falls off.")
+			document.getElementById('wins');
+			console.log(wins)
+
+		}
+	}
+}
+
+function playGame (event) {
+		checkLetter();
+		checkWin();
+	}
 
 startGame();
-playGame();
+document.onkeyup = function (event) {
+		var letterGuessed = String.fromCharCode(event.keyCode).toUpperCase();
 
+		playGame();
+}
 
-// start game
-// play game
-	// check letter
-	// if (letter is in alphaet) {
-	// 	if { letter is not in guessedLetters
-	// 		push keyPress to lettersGuessed
-	// 		guess(letter);
-	//
 
