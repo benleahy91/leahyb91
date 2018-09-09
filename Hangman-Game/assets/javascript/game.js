@@ -16,7 +16,8 @@ function startGame(event) {
 	lettersRemaining = 0;
 	var randomWord = dogCelebs[Math.floor(Math.random() * dogCelebs.length)];
 	guessesLeft = 8;
-	wrongGuesses = []
+	wrongGuesses = [];
+	gamehud=[];
 
 	// Split / underscores
 	wordSplit = randomWord.split('');
@@ -52,6 +53,7 @@ function checkLetter(letter) {
 
 	if (alphabet.indexOf(letterGuessed) === -1) {
 		alert('That is not a letter');
+		return;
 	}
 
 	if (wrongGuesses.indexOf(letterGuessed) !== -1) {
@@ -77,28 +79,29 @@ function checkLetter(letter) {
 				letterInWord = true;
 			}
 		if (letterInWord = true) {
-				document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
+				// document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 
-			for (var i = 0; i < wordSplit.length + 1; i++) {
+			for (var i = 0; i < wordSplit.length; i++) {
 				if (wordSplit[i] === letterGuessed) {
-					lettersRemaining--
-					gamehud[i] === letterGuessed;
+					gamehud[i] = letterGuessed;
 					document.getElementById("gamehud").innerHTML = gamehud.join(' ');
-					console.log(gamehud)
-					console.log(letterGuessed)
+					lettersRemaining--;
+					console.log(gamehud);
+					console.log(letterGuessed);
 				}
 			}
 		}
 	}
 }
 
-
 function checkWin(event) {
 
 	if (guessesLeft === 0) {
 		alert('You lose. Your defeat will be etched in the annals of history and your great, great, great, grandchildren will be ashamed of your existence until you are inevitably forgotten.');
-		losses++
-		document.getElementById('losses');
+		losses++;
+		alert("Your word was" + random)
+
+		document.getElementById('losses').innerHTML=losses;
 		var playAgain = confirm('Would you like to play again?');
 
 		if (playAgain == true) {
@@ -112,9 +115,9 @@ function checkWin(event) {
 	}
 
 	if (lettersRemaining === 0) {
+		wins++;
+		document.getElementById('wins').innerHTML=wins;
 		alert('You win!');
-		wins++
-		document.getElementById('wins');
 		var playAgain = confirm('Would you like to play again?');
 
 		if (playAgain == true) {
@@ -125,7 +128,6 @@ function checkWin(event) {
 			alert("Fine, I don't want you playing my game anyway. I put a lot of work into this you know. I honestly hope your butt falls off.")
 			document.getElementById('wins');
 			console.log(wins)
-
 		}
 	}
 }
@@ -141,5 +143,3 @@ document.onkeyup = function (event) {
 
 		playGame();
 }
-
-
