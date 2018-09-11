@@ -10,9 +10,12 @@ function displayButtons() {
 	}
 }
 
-function renderButtons() {
-	console.log(this)
+window.onload = function() {
+
+	displayButtons();
+	$(".gif-buttons").on("click", function() {
 	var food = $(this).attr("data-name");
+	console.log(food);
 	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=DGTFDaoh1rEWin03Rjdu3d9Rc0nVb414&q=" + food + "&limit=10&offset=0&rating=PG&lang=en"
 	$.ajax({
 	url: queryURL,
@@ -24,12 +27,5 @@ function renderButtons() {
 			// console.log(food);
 
 	});
-}
-
-window.onload = function() {
-
-	displayButtons();
-	$(".gif-buttons").on("click", function() {
-		renderButtons();
 	});
 }
