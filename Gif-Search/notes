@@ -1,0 +1,28 @@
+Button bar
+	Pre-loaded gifs
+	Click on button loads Giphy API
+	Populates Gifs
+	Array with foods
+		Button created for each item in array
+
+
+Gifs
+	loaded from API
+	Rating
+	Pause/Resume Gif
+		Start on still
+
+Add Gifs
+	input bar
+	submit button
+		adds button to button bar
+		loads gifs for input
+
+
+
+Global Variables
+	Food list
+
+DisplayButton
+	Create button for each item in food array
+		
