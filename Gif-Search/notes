@@ -25,4 +25,26 @@ Global Variables
 
 DisplayButton
 	Create button for each item in food array
-		
+
+function renderButtons() {
+	$("button").on("click", function() {
+		var food = $(this).attr("food-name");
+		var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=DGTFDaoh1rEWin03Rjdu3d9Rc0nVb414&q=" + food + "&limit=12&offset=0&rating=R&lang=en";
+		$("#my-dude").attr("src", "assets/images/my-dude.png");
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).done(function(response) {
+			$("#gifs").empty();
+			var results = response.data;
+			for (i = 0; i < results.length; i++) {
+				var gifDiv = $("<div>");
+				var foodGif = $("<img>");
+				foodGif.addClass("food-gif")
+				foodGif.attr("src", results[i].images.fixed_height.url);
+				gifDiv.append(foodGif);
+				$("#gifs").prepend(gifDiv);
+			};
+		});
+	});
+};

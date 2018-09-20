@@ -1,0 +1,52 @@
+h1 {
+	font-family: anglicantextregular;
+	font-size: 72px;
+}
+
+button {
+	margin: 5px;
+}
+
+.title-row {
+padding: 0px;
+border: 10px;
+height: 100px;
+}
+
+.title-text {
+	border: 1px solid #010000;
+	margin-left: -5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.kramer {
+	height: 100px;
+	width: 100px;
+	border: 1px solid #010000;
+}
+
+#my-dude {
+	height: 200px;
+	width: 275px;
+	margin-bottom: 20px;
+}
+
+.food-gif {
+	height: 250px;
+	width: 290px;
+	padding: 10px;
+}
+
+#gifs {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+@font-face {
+	font-family: 'anglicantextregular';
+	src: url('anglicantext.woff2') format('woff2'),
+	url('anglicantext.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

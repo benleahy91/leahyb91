@@ -3,8 +3,9 @@
 
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"crossorigin="anonymous">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<meta name="google" content="notranslate">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -12,19 +13,27 @@
 </head>
 
 <body>
-<div class="container-fluid">
 
-	<div class="gif-buttons"> </div>
-
-	<div class="row" class="gif-content">
-
-		<div class="col-md-9 col-sm-12" class="gifs"> </div>
-
-		<div class="col-md-3 col-sm-12 offset col-md-9" class="add-gif"> </div>
-			<input type= "text" id= "enter-gif">
-			<input id="add-movie" type="submit" value="Add a Gif!">
-	</div>
-
+<div class="row">
+	<div class ="offset-md-2 col-md-8 d-flex justify-content-center">
+		<img src="assets/images/kramergobble2.gif" class= "img-responsive">
+		<h1 class= "title-text d-flex h-100 align-items-center">Tis' Gobblin' Time</h1>
+		<img src="assets/images/kramergobble.gif" class= "img-responsive">
 </div>
+
+<div class="container-fluid">
+	<div class="gif-buttons">
+	</div>
+	<div class="row" class="gif-content">
+		<div class="col-md-9 col-sm-12" id="gifs">
+		</div>
+		<div class="col-sm-12 col-md-3 text-right gif-search" class="add-gif">
+			<img class="img-responsive" src="assets/images/my-dude.png" id= "my-dude"> <br>
+			<input type= "text" id= "enter-gif">
+			<input id="add-gif" type="submit" value="Add a Gif!">
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
